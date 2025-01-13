@@ -1,3 +1,26 @@
-h1 {
-    color: brown;
+body {
+    margin: 0;
+    overflow: hidden; /* Prevents scrolling */
+    background: black; /* Adds a fallback background color for areas not covered by the video */
+}
+
+#background-video {
+    position: fixed; /* Keeps the video fixed to the viewport */
+    top: 50%; /* Center the video vertically */
+    left: 50%; /* Center the video horizontally */
+    transform: translate(-50%, -50%); /* Ensures the video is centered */
+    width: 100vw; /* Scale to fit the viewport width */
+    height: 100vh; /* Scale to fit the viewport height */
+    object-fit:cover; /* Ensures the entire video is visible without cropping */
+    z-index: -1; /* Places the video behind other content */
+}
+
+#overlay-image {
+    position:absolute;/* Position the image over the video */
+    top:auto;
+    margin: auto;
+    left: 10%; /* Adjust the position as needed */ 
+    width: 750px; /* Set the image size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it's above the video */
 }
