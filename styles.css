@@ -1,26 +1,154 @@
+/* General Styling */
 body {
     margin: 0;
-    overflow: hidden; /* Prevents scrolling */
-    background: black; /* Adds a fallback background color for areas not covered by the video */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-color: black;
 }
 
+/* Background Video */
 #background-video {
-    position: fixed; /* Keeps the video fixed to the viewport */
-    top: 50%; /* Center the video vertically */
-    left: 50%; /* Center the video horizontally */
-    transform: translate(-50%, -50%); /* Ensures the video is centered */
-    width: 100vw; /* Scale to fit the viewport width */
-    height: 100vh; /* Scale to fit the viewport height */
-    object-fit:cover; /* Ensures the entire video is visible without cropping */
-    z-index: -1; /* Places the video behind other content */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
+/* Overlay Image */
 #overlay-image {
-    position:absolute;/* Position the image over the video */
-    top:auto;
-    margin: auto;
-    left: 10%; /* Adjust the position as needed */ 
-    width: 750px; /* Set the image size */
-    height: auto; /* Maintain aspect ratio */
-    z-index: 1; /* Ensure it's above the video */
+    position: absolute;
+    top: -10%;
+    left: 1%;
+    width: 400px;
+    z-index: 1;
+}
+
+/* Main Content */
+#main-content {
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Section Styling */
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section h2 {
+    color: #FFD700;
+}
+
+/* Media Gallery */
+.media-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media-gallery video,
+.media-gallery img {
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #FFC107;
+}
+
+/* Navigation Menu */
+#menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+}
+
+#menu-button {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu-button:hover {
+    background-color: #FFC107;
+}
+
+#menu-items {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    text-align: left;
+}
+
+#menu-items li {
+    margin: 5px 0;
+}
+
+#menu-items a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#menu-items a:hover {
+    background-color: #FFC107;
+}
+
+.hidden {
+    display: none;
 }
